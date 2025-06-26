@@ -57,7 +57,7 @@ export default function Home() {
             <Button
               variant="secondary"
               size="lg"
-              className="px-10 py-6 text-lg font-sans"
+              className="px-10 py-6 text-lg font-sans transition-all hover:shadow-lg hover:shadow-white/10 hover:-translate-y-1"
               onClick={() => setKnowMoreModalOpen(true)}
             >
               Know More
@@ -65,7 +65,7 @@ export default function Home() {
             <Button
               variant="default"
               size="lg"
-              className="px-10 py-6 text-lg font-sans"
+              className="px-10 py-6 text-lg font-sans transition-all hover:shadow-lg hover:shadow-primary/50 hover:-translate-y-1"
               onClick={() => setContactModalOpen(true)}
             >
               Contact Us
