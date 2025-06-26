@@ -18,7 +18,7 @@ export default function Home() {
       </div>
 
       <div className="relative z-10 flex flex-col items-center justify-center text-center p-4">
-        <div className="mb-6 rounded-2xl border-2 border-accent/70 bg-black/30 p-4 backdrop-blur-sm">
+        <div className="mb-6">
           <UshaLogo />
         </div>
 
