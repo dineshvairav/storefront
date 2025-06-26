@@ -86,8 +86,14 @@ export function KnowMoreModal({ isOpen, onOpenChange }: KnowMoreModalProps) {
               What We Offer
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-              {features.map((feature) => {
-                const cardInner = (
+              {features.map((feature) => (
+                <a
+                  key={feature.title}
+                  href="https://example.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group"
+                >
                   <Card className="text-center flex flex-col items-center justify-center p-4 aspect-square h-full transition-all duration-200 group-hover:shadow-xl group-hover:-translate-y-1 group-hover:bg-white/5">
                     <CardHeader className="p-0 mb-2">
                       <feature.icon className="h-8 w-8 text-primary" />
@@ -96,14 +102,8 @@ export function KnowMoreModal({ isOpen, onOpenChange }: KnowMoreModalProps) {
                       <p className="font-semibold text-sm">{feature.title}</p>
                     </CardContent>
                   </Card>
-                );
-
-                return (
-                  <div key={feature.title} className="group cursor-default">
-                    {cardInner}
-                  </div>
-                );
-              })}
+                </a>
+              ))}
             </div>
           </div>
 
