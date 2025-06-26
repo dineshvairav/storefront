@@ -31,9 +31,19 @@ export default function Home() {
             <UshaLogo />
           </div>
 
-          <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gray-200 font-sans">
-            ushª<span className="text-primary">O</span>ªpp
-          </h1>
+          <a
+            href="https://example.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative inline-block mb-8"
+          >
+            <div
+              className="absolute -inset-1 rounded-full bg-gradient-to-r from-fuchsia-600 to-blue-600 opacity-75 blur-md transition duration-500 group-hover:opacity-100"
+            ></div>
+            <div className="relative flex items-center rounded-full bg-black px-10 py-4 text-3xl font-bold leading-none text-white md:text-4xl">
+              ushª<span className="text-primary">O</span>ªpp
+            </div>
+          </a>
 
           <p className="max-w-md text-lg text-gray-300 mb-8 font-sans">
             Your one-stop destination for quality household goods, from traditional
