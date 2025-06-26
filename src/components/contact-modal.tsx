@@ -15,9 +15,9 @@ type ContactModalProps = {
 };
 
 export function ContactModal({ isOpen, onOpenChange }: ContactModalProps) {
-  const address = "123 Usha Street, Chennai, Tamil Nadu 600001, India";
-  const phone = "+91 98765 43210";
-  const email = "contact@usha.app";
+  const address = "Usha Metals & Appliances, Fancy Bazaar, Changanacherry 686101, Kerala, India";
+  const phone = "+91 99612 95835";
+  const email = "ushaagency1960@gmail.com";
 
   return (
     <Sheet open={isOpen} onOpenChange={onOpenChange}>
@@ -39,7 +39,7 @@ export function ContactModal({ isOpen, onOpenChange }: ContactModalProps) {
           >
             <MapPin className="h-8 w-8 mb-2 text-primary" />
             <h3 className="font-semibold text-lg">Our Address</h3>
-            <p className="text-muted-foreground group-hover:text-primary transition-colors">
+            <p className="text-muted-foreground group-hover:text-primary transition-colors break-words">
               {address}
             </p>
           </a>
@@ -59,7 +59,7 @@ export function ContactModal({ isOpen, onOpenChange }: ContactModalProps) {
           >
             <Mail className="h-8 w-8 mb-2 text-primary" />
             <h3 className="font-semibold text-lg">Email Address</h3>
-            <p className="text-muted-foreground group-hover:text-primary transition-colors">
+            <p className="text-muted-foreground group-hover:text-primary transition-colors break-words">
               {email}
             </p>
           </a>
