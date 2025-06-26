@@ -19,6 +19,8 @@ import {
   Gem,
   Blend,
   UtensilsCrossed,
+  Utensils,
+  CookingPot,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -38,6 +40,8 @@ const features: { title: string; icon: LucideIcon }[] = [
   { title: "Brass Articles", icon: Gem },
   { title: "Glassware", icon: GlassWater },
   { title: "Small appliances", icon: Blend },
+  { title: "Traditional Utensils", icon: Utensils },
+  { title: "Cast Iron", icon: CookingPot },
 ];
 
 export function KnowMoreModal({ isOpen, onOpenChange }: KnowMoreModalProps) {
