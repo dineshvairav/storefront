@@ -66,3 +66,43 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  @property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+  
+  .animated-gradient-border {
+    position: relative;
+    border-radius: 1rem; /* 16px */
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    background-color: black;
+    padding: 0.5rem; /* 8px */
+  }
+
+  .animated-gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    margin: -2px; /* same as border-width */
+    border-radius: inherit;
+    background: conic-gradient(from var(--angle), hsl(var(--accent)), hsl(var(--primary)), hsl(var(--accent)));
+    animation: spin 4s linear infinite;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  
+  .group:hover .animated-gradient-border::before {
+      opacity: 1;
+  }
+  
+  @keyframes spin {
+    to {
+      --angle: 360deg;
+    }
+  }
+}

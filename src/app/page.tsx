@@ -27,21 +27,14 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 flex flex-col items-center justify-center text-center p-4">
-          <div className="mb-6">
-            <UshaLogo />
-          </div>
-
           <a
             href="https://example.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative inline-block mb-8"
+            className="group mb-8"
           >
-            <div
-              className="absolute -inset-1 rounded-full bg-gradient-to-r from-fuchsia-600 to-blue-600 opacity-75 blur-md transition duration-500 group-hover:opacity-100"
-            ></div>
-            <div className="relative flex items-center rounded-full bg-black px-10 py-4 text-3xl font-bold leading-none text-white md:text-4xl">
-              ushª<span className="text-primary">O</span>ªpp
+            <div className="animated-gradient-border">
+              <UshaLogo />
             </div>
           </a>
 
