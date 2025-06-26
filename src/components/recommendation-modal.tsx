@@ -43,7 +43,6 @@ export default function RecommendationModal({
       const result = await getProductRecommendations({
         productName: product.name,
         productDescription: product.description,
-        category: product.category,
       });
       setRecommendations(result);
     } catch (e) {

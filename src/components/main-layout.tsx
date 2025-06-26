@@ -14,7 +14,6 @@ import {
   SidebarTrigger,
   SidebarInset,
 } from "@/components/ui/sidebar";
-import { categories } from "@/lib/data";
 import { Home } from "lucide-react";
 import React from "react";
 
@@ -43,23 +42,6 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
                 </Link>
               </SidebarMenuButton>
             </SidebarMenuItem>
-            {categories.map((category) => {
-              const Icon = category.icon;
-              return (
-                <SidebarMenuItem key={category.slug}>
-                  <SidebarMenuButton
-                    asChild
-                    isActive={pathname === `/category/${category.slug}`}
-                    tooltip={{ children: category.name }}
-                  >
-                    <Link href={`/category/${category.slug}`}>
-                      <Icon />
-                      <span>{category.name}</span>
-                    </Link>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              );
-            })}
           </SidebarMenu>
         </SidebarContent>
         <SidebarFooter>

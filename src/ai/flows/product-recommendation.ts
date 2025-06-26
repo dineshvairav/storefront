@@ -14,7 +14,6 @@ import {z} from 'genkit';
 const GetProductRecommendationsInputSchema = z.object({
   productName: z.string().describe('The name of the product to base recommendations on.'),
   productDescription: z.string().describe('The description of the product.'),
-  category: z.string().describe('The category of the product.'),
 });
 export type GetProductRecommendationsInput = z.infer<
   typeof GetProductRecommendationsInputSchema
@@ -46,9 +45,8 @@ const prompt = ai.definePrompt({
 
   Product Name: {{{productName}}}
   Product Description: {{{productDescription}}}
-  Category: {{{category}}}
 
-  Based on the product name, description, and category, recommend a list of products that would be relevant to the user.
+  Based on the product name and description, recommend a list of products that would be relevant to the user.
   Explain your reasoning.
   `,config: {
     safetySettings: [

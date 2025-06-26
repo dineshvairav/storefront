@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import {
   Sheet,
   SheetContent,
@@ -34,26 +33,21 @@ type KnowMoreModalProps = {
 type Feature = {
   title: string;
   icon: LucideIcon;
-  slug?: string;
 };
 
 const features: Feature[] = [
   { title: "Wholesale & Retail", icon: Store },
   { title: "Since 1960", icon: CalendarClock },
-  { title: "Housewares", icon: Home, slug: "kitchen-items" },
-  { title: "Crockery", icon: UtensilsCrossed, slug: "kitchen-items" },
-  {
-    title: "Presentation article",
-    icon: Presentation,
-    slug: "presentation-articles",
-  },
-  { title: "Aluminum Vessels", icon: Package, slug: "aluminum" },
-  { title: "Steel Vessels", icon: Layers3, slug: "stainless-steel" },
-  { title: "Brass Articles", icon: Gem, slug: "brass" },
-  { title: "Glassware", icon: GlassWater, slug: "kitchen-items" },
-  { title: "Small appliances", icon: Blend, slug: "small-appliances" },
-  { title: "Traditional Utensils", icon: Utensils, slug: "kitchen-items" },
-  { title: "Cast Iron", icon: CookingPot, slug: "cast-iron" },
+  { title: "Housewares", icon: Home },
+  { title: "Crockery", icon: UtensilsCrossed },
+  { title: "Presentation article", icon: Presentation },
+  { title: "Aluminum Vessels", icon: Package },
+  { title: "Steel Vessels", icon: Layers3 },
+  { title: "Brass Articles", icon: Gem },
+  { title: "Glassware", icon: GlassWater },
+  { title: "Small appliances", icon: Blend },
+  { title: "Traditional Utensils", icon: Utensils },
+  { title: "Cast Iron", icon: CookingPot },
 ];
 
 export function KnowMoreModal({ isOpen, onOpenChange }: KnowMoreModalProps) {
@@ -103,18 +97,6 @@ export function KnowMoreModal({ isOpen, onOpenChange }: KnowMoreModalProps) {
                     </CardContent>
                   </Card>
                 );
-
-                if (feature.slug) {
-                  return (
-                    <Link
-                      href={`/category/${feature.slug}`}
-                      key={feature.title}
-                      className="group"
-                    >
-                      {cardInner}
-                    </Link>
-                  );
-                }
 
                 return (
                   <div key={feature.title} className="group cursor-default">
