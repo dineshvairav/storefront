@@ -4,10 +4,12 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { UshaLogo } from "@/components/UshaLogo";
 import { ContactModal } from "@/components/contact-modal";
+import { KnowMoreModal } from "@/components/know-more-modal";
 import { useState } from "react";
 
 export default function Home() {
   const [isContactModalOpen, setContactModalOpen] = useState(false);
+  const [isKnowMoreModalOpen, setKnowMoreModalOpen] = useState(false);
 
   return (
     <>
@@ -40,11 +42,10 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row gap-4">
             <Button
-              as="a"
-              href="/category/kitchen-items"
               variant="secondary"
               size="lg"
               className="px-10 py-6 text-lg font-sans"
+              onClick={() => setKnowMoreModalOpen(true)}
             >
               Know More
             </Button>
@@ -62,6 +63,10 @@ export default function Home() {
       <ContactModal
         isOpen={isContactModalOpen}
         onOpenChange={setContactModalOpen}
+      />
+      <KnowMoreModal
+        isOpen={isKnowMoreModalOpen}
+        onOpenChange={setKnowMoreModalOpen}
       />
     </>
   );
