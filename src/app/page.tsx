@@ -33,7 +33,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="group mb-8"
           >
-            <div className="animated-gradient-border">
+            <div className="animated-gradient-border p-4 px-8">
               <UshaLogo />
             </div>
           </a>

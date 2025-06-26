@@ -76,11 +76,10 @@
   
   .animated-gradient-border {
     position: relative;
-    border-radius: 1rem; /* 16px */
+    border-radius: 9999px;
     border: 2px solid transparent;
     background-clip: padding-box;
     background-color: black;
-    padding: 0.5rem; /* 8px */
   }
 
   .animated-gradient-border::before {
