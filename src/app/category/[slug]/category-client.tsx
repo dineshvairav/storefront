@@ -3,20 +3,19 @@
 import { useState, useMemo } from "react";
 import { ProductCard } from "@/components/product-card";
 import { Button } from "@/components/ui/button";
-import type { Product, Category } from "@/lib/data";
+import type { Product } from "@/lib/data";
 import { X } from "lucide-react";
 
 type CategoryClientProps = {
   initialProducts: Product[];
-  allProducts: Product[];
-  category: Category;
+  categorySlug: string;
   materials: string[];
 };
 
-export default function CategoryClient({ initialProducts, category, materials }: CategoryClientProps) {
+export default function CategoryClient({ initialProducts, categorySlug, materials }: CategoryClientProps) {
   const [activeFilter, setActiveFilter] = useState<string | null>(null);
 
-  const isMaterialCategory = ['brass', 'aluminum', 'stainless-steel', 'cast-iron'].includes(category.slug);
+  const isMaterialCategory = ['brass', 'aluminum', 'stainless-steel', 'cast-iron'].includes(categorySlug);
 
   const filteredProducts = useMemo(() => {
     if (!activeFilter) {

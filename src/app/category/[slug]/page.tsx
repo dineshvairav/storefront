@@ -49,8 +49,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
       <Header title={category.name} />
       <CategoryClient 
         initialProducts={categoryProducts} 
-        allProducts={products}
-        category={category}
+        categorySlug={category.slug}
         materials={materials} 
       />
     </MainLayout>
