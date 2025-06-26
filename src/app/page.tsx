@@ -8,10 +8,10 @@ import { KnowMoreModal } from "@/components/know-more-modal";
 import { useState, useEffect } from "react";
 
 const backgroundImages = [
-  { src: "/home_1.png", hint: "kitchen appliances dark" },
-  { src: "/home_2.png", hint: "kitchen utensils" },
-  { src: "/home_3.png", hint: "modern cookware" },
-  { src: "/home_4.png", hint: "assorted pots pans" },
+  { src: "./home_1.png", hint: "kitchen appliances dark" },
+  { src: "./home_2.png", hint: "kitchen utensils" },
+  { src: "./home_3.png", hint: "modern cookware" },
+  { src: "./home_4.png", hint: "assorted pots pans" },
 ];
 
 export default function Home() {
@@ -53,7 +53,7 @@ export default function Home() {
         <div className="relative z-10 flex flex-col items-center justify-center text-center p-4">
           <div className="mb-4">
             <Image
-              src="/logo.png"
+              src="./logo.png"
               alt="Usha Logo"
               width={240}
               height={100}
@@ -62,7 +62,7 @@ export default function Home() {
             />
           </div>
           <a
-            href="https://example.com"
+            href="https://shop.usha1960.trade/"
             target="_blank"
             rel="noopener noreferrer"
             className="group mb-8"
