@@ -3,11 +3,11 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { UshaLogo } from "@/components/UshaLogo";
-import { useState } from "react";
 import { ContactModal } from "@/components/contact-modal";
+import { useState } from "react";
 
 export default function Home() {
-  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [isContactModalOpen, setContactModalOpen] = useState(false);
   const address = "123 Usha Street, Chennai, Tamil Nadu 600001, India";
 
   return (
@@ -40,29 +40,33 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button asChild variant="secondary" size="lg" className="px-10 py-6 text-lg font-sans">
-              <a 
-                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`} 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                Locate Us
-              </a>
-            </Button>
-            <Button 
-              variant="default" 
-              size="lg" 
+            <Button
+              as="a"
+              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                address
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="secondary"
+              size="lg"
               className="px-10 py-6 text-lg font-sans"
-              onClick={() => setIsContactModalOpen(true)}
+            >
+              Locate Us
+            </Button>
+            <Button
+              variant="default"
+              size="lg"
+              className="px-10 py-6 text-lg font-sans"
+              onClick={() => setContactModalOpen(true)}
             >
               Contact Us
             </Button>
           </div>
         </div>
       </main>
-      <ContactModal 
+      <ContactModal
         isOpen={isContactModalOpen}
-        onOpenChange={setIsContactModalOpen}
+        onOpenChange={setContactModalOpen}
       />
     </>
   );
