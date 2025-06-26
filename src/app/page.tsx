@@ -27,6 +27,16 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 flex flex-col items-center justify-center text-center p-4">
+          <div className="mb-4">
+            <Image
+              src="/logo.png"
+              alt="Usha Logo"
+              width={240}
+              height={100}
+              className="object-contain"
+              data-ai-hint="company logo"
+            />
+          </div>
           <a
             href="https://example.com"
             target="_blank"
