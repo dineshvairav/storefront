@@ -28,41 +28,41 @@ export function ContactModal({ isOpen, onOpenChange }: ContactModalProps) {
             Get in touch with us through any of the channels below.
           </SheetDescription>
         </SheetHeader>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center p-4">
-          <div className="flex flex-col items-center space-y-2">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center p-4">
+          <a
+            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+              address
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex flex-col items-center space-y-2 p-4 rounded-lg transition-all hover:bg-white/5 hover:-translate-y-1"
+          >
             <MapPin className="h-8 w-8 mb-2 text-primary" />
             <h3 className="font-semibold text-lg">Our Address</h3>
-            <a
-              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                address
-              )}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors"
-            >
+            <p className="text-muted-foreground group-hover:text-primary transition-colors">
               {address}
-            </a>
-          </div>
-          <div className="flex flex-col items-center space-y-2">
+            </p>
+          </a>
+          <a
+            href={`tel:${phone.replace(/\s/g, "")}`}
+            className="group flex flex-col items-center space-y-2 p-4 rounded-lg transition-all hover:bg-white/5 hover:-translate-y-1"
+          >
             <Phone className="h-8 w-8 mb-2 text-primary" />
             <h3 className="font-semibold text-lg">Phone Number</h3>
-            <a
-              href={`tel:${phone.replace(/\s/g, "")}`}
-              className="text-muted-foreground hover:text-primary transition-colors"
-            >
+            <p className="text-muted-foreground group-hover:text-primary transition-colors">
               {phone}
-            </a>
-          </div>
-          <div className="flex flex-col items-center space-y-2">
+            </p>
+          </a>
+          <a
+            href={`mailto:${email}`}
+            className="group flex flex-col items-center space-y-2 p-4 rounded-lg transition-all hover:bg-white/5 hover:-translate-y-1"
+          >
             <Mail className="h-8 w-8 mb-2 text-primary" />
             <h3 className="font-semibold text-lg">Email Address</h3>
-            <a
-              href={`mailto:${email}`}
-              className="text-muted-foreground hover:text-primary transition-colors"
-            >
+            <p className="text-muted-foreground group-hover:text-primary transition-colors">
               {email}
-            </a>
-          </div>
+            </p>
+          </a>
         </div>
       </SheetContent>
     </Sheet>
