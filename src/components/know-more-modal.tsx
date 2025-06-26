@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import {
   Sheet,
   SheetContent,
@@ -30,19 +31,29 @@ type KnowMoreModalProps = {
   onOpenChange: (isOpen: boolean) => void;
 };
 
-const features: { title: string; icon: LucideIcon }[] = [
+type Feature = {
+  title: string;
+  icon: LucideIcon;
+  slug?: string;
+};
+
+const features: Feature[] = [
   { title: "Wholesale & Retail", icon: Store },
   { title: "Since 1960", icon: CalendarClock },
-  { title: "Housewares", icon: Home },
-  { title: "Crockery", icon: UtensilsCrossed },
-  { title: "Presentation article", icon: Presentation },
-  { title: "Aluminum Vessels", icon: Package },
-  { title: "Steel Vessels", icon: Layers3 },
-  { title: "Brass Articles", icon: Gem },
-  { title: "Glassware", icon: GlassWater },
-  { title: "Small appliances", icon: Blend },
-  { title: "Traditional Utensils", icon: Utensils },
-  { title: "Cast Iron", icon: CookingPot },
+  { title: "Housewares", icon: Home, slug: "kitchen-items" },
+  { title: "Crockery", icon: UtensilsCrossed, slug: "kitchen-items" },
+  {
+    title: "Presentation article",
+    icon: Presentation,
+    slug: "presentation-articles",
+  },
+  { title: "Aluminum Vessels", icon: Package, slug: "aluminum" },
+  { title: "Steel Vessels", icon: Layers3, slug: "stainless-steel" },
+  { title: "Brass Articles", icon: Gem, slug: "brass" },
+  { title: "Glassware", icon: GlassWater, slug: "kitchen-items" },
+  { title: "Small appliances", icon: Blend, slug: "small-appliances" },
+  { title: "Traditional Utensils", icon: Utensils, slug: "kitchen-items" },
+  { title: "Cast Iron", icon: CookingPot, slug: "cast-iron" },
 ];
 
 export function KnowMoreModal({ isOpen, onOpenChange }: KnowMoreModalProps) {
@@ -59,41 +70,68 @@ export function KnowMoreModal({ isOpen, onOpenChange }: KnowMoreModalProps) {
           </SheetDescription>
         </SheetHeader>
         <div className="px-6 pb-6 space-y-8">
-            <div>
-                <h3 className="text-xl font-semibold mb-2 text-center text-primary">Our Story</h3>
-                <p className="text-muted-foreground text-center max-w-3xl mx-auto">
-                    Founded in 1960, Usha has been a cornerstone of households for generations. We started as a humble store with a simple mission: to provide high-quality, durable household goods to our community. Over the decades, we've grown and adapted, expanding our offerings from traditional vessels to modern appliances, but our commitment to quality and customer satisfaction has never wavered. We are proud to be a part of your home.
-                </p>
-            </div>
-            
-            <Separator />
+          <div>
+            <h3 className="text-xl font-semibold mb-2 text-center text-primary">
+              Our Story
+            </h3>
+            <p className="text-muted-foreground text-center max-w-3xl mx-auto">
+              Founded in 1960, Usha has been a cornerstone of households for
+              generations. We started as a humble store with a simple mission: to
+              provide high-quality, durable household goods to our community.
+              Over the decades, we've grown and adapted, expanding our offerings
+              from traditional vessels to modern appliances, but our commitment
+              to quality and customer satisfaction has never wavered. We are
+              proud to be a part of your home.
+            </p>
+          </div>
 
-            <div>
-                 <h3 className="text-xl font-semibold mb-4 text-center text-primary">What We Offer</h3>
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                  {features.map((feature) => (
-                    <Card
+          <Separator />
+
+          <div>
+            <h3 className="text-xl font-semibold mb-4 text-center text-primary">
+              What We Offer
+            </h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+              {features.map((feature) => {
+                const cardInner = (
+                  <Card className="text-center flex flex-col items-center justify-center p-4 aspect-square h-full transition-all duration-200 group-hover:shadow-xl group-hover:-translate-y-1 group-hover:bg-white/5">
+                    <CardHeader className="p-0 mb-2">
+                      <feature.icon className="h-8 w-8 text-primary" />
+                    </CardHeader>
+                    <CardContent className="p-0">
+                      <p className="font-semibold text-sm">{feature.title}</p>
+                    </CardContent>
+                  </Card>
+                );
+
+                if (feature.slug) {
+                  return (
+                    <Link
+                      href={`/category/${feature.slug}`}
                       key={feature.title}
-                      className="text-center flex flex-col items-center justify-center p-4 aspect-square hover:shadow-lg hover:-translate-y-1 transition-transform duration-200"
+                      className="group"
                     >
-                      <CardHeader className="p-0 mb-2">
-                        <feature.icon className="h-8 w-8 text-primary" />
-                      </CardHeader>
-                      <CardContent className="p-0">
-                        <p className="font-semibold text-sm">{feature.title}</p>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
+                      {cardInner}
+                    </Link>
+                  );
+                }
+
+                return (
+                  <div key={feature.title} className="group cursor-default">
+                    {cardInner}
+                  </div>
+                );
+              })}
             </div>
-            
-            <div className="pt-4 text-center text-sm text-muted-foreground">
-              <p>
-                <strong>Note:</strong> Service available for mixers, cookers, and
-                LPG stoves bought from our ushª
-                <span className="text-primary font-sans">O</span>ªpp store.
-              </p>
-            </div>
+          </div>
+
+          <div className="pt-4 text-center text-sm text-muted-foreground">
+            <p>
+              <strong>Note:</strong> Service available for mixers, cookers, and
+              LPG stoves bought from our ushª
+              <span className="text-primary font-sans">O</span>ªpp store.
+            </p>
+          </div>
         </div>
       </SheetContent>
     </Sheet>
