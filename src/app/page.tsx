@@ -8,7 +8,6 @@ import { useState } from "react";
 
 export default function Home() {
   const [isContactModalOpen, setContactModalOpen] = useState(false);
-  const address = "123 Usha Street, Chennai, Tamil Nadu 600001, India";
 
   return (
     <>
@@ -42,16 +41,12 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Button
               as="a"
-              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                address
-              )}`}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/category/kitchen-items"
               variant="secondary"
               size="lg"
               className="px-10 py-6 text-lg font-sans"
             >
-              Locate Us
+              Know More
             </Button>
             <Button
               variant="default"
