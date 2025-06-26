@@ -5,24 +5,48 @@ import { Button } from "@/components/ui/button";
 import { UshaLogo } from "@/components/UshaLogo";
 import { ContactModal } from "@/components/contact-modal";
 import { KnowMoreModal } from "@/components/know-more-modal";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+const backgroundImages = [
+  { src: "/home_1.png", hint: "kitchen appliances dark" },
+  { src: "/home_2.png", hint: "kitchen utensils" },
+  { src: "/home_3.png", hint: "modern cookware" },
+  { src: "/home_4.png", hint: "assorted pots pans" },
+];
 
 export default function Home() {
   const [isContactModalOpen, setContactModalOpen] = useState(false);
   const [isKnowMoreModalOpen, setKnowMoreModalOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImageIndex(
+        (prevIndex) => (prevIndex + 1) % backgroundImages.length
+      );
+    }, 15000); // Change image every 15 seconds
+
+    return () => clearInterval(timer); // Cleanup interval on component unmount
+  }, []);
 
   return (
     <>
       <main className="relative flex min-h-screen flex-col items-center justify-center text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image
-            src="https://placehold.co/1200x800.png"
-            alt="Background of kitchen appliances"
-            fill={true}
-            objectFit="cover"
-            className="brightness-50"
-            data-ai-hint="kitchen appliances dark"
-          />
+          {backgroundImages.map((image, index) => (
+            <Image
+              key={image.src}
+              src={image.src}
+              alt="Background of kitchen appliances"
+              fill={true}
+              objectFit="cover"
+              className={`transition-opacity duration-1000 ease-in-out brightness-50 ${
+                index === currentImageIndex ? "opacity-100" : "opacity-0"
+              }`}
+              data-ai-hint={image.hint}
+              priority={index === 0} // Prioritize loading the first image
+            />
+          ))}
           <div className="absolute inset-0 bg-black/60" />
         </div>
 
