@@ -72,6 +72,13 @@ export function KnowMoreModal({ isOpen, onOpenChange }: KnowMoreModalProps) {
             </Card>
           ))}
         </div>
+        <div className="px-4 py-2 text-center text-sm text-muted-foreground">
+          <p>
+            <strong>Note:</strong> Service available for mixers, cookers, and
+            LPG stoves bought from our ushª
+            <span className="text-primary font-sans">O</span>ªpp store.
+          </p>
+        </div>
       </SheetContent>
     </Sheet>
   );
