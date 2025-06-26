@@ -23,7 +23,7 @@ export default function Home() {
         </div>
 
         <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gray-200 font-sans">
-          usha<span className="text-primary">O</span>app
+          ushª<span className="text-primary">O</span>ªpp
         </h1>
 
         <p className="max-w-md text-lg text-gray-300 mb-8 font-sans">
@@ -33,10 +33,10 @@ export default function Home() {
 
         <div className="flex flex-col sm:flex-row gap-4">
           <Button variant="secondary" size="lg" className="px-10 py-6 text-lg font-sans">
-            Know More
+            Locate Us
           </Button>
           <Button variant="default" size="lg" className="px-10 py-6 text-lg font-sans">
-            Get Started
+            Contact Us
           </Button>
         </div>
       </div>
