@@ -41,7 +41,7 @@ export default function Home() {
               src={image.src}
               alt="Background of kitchen appliances"
               fill
-              className={`object-cover transition-opacity duration-[3000ms] ease-in-out brightness-50 ${
+              className={`object-cover transition-opacity duration-[3000ms] ease-in-out brightness-50 will-change-opacity ${
                 index === currentImageIndex ? "opacity-100" : "opacity-0"
               }`}
               data-ai-hint={image.hint}
