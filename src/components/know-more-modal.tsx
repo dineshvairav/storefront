@@ -33,21 +33,22 @@ type KnowMoreModalProps = {
 type Feature = {
   title: string;
   icon: LucideIcon;
+  href: string;
 };
 
 const features: Feature[] = [
-  { title: "Wholesale & Retail", icon: Store },
-  { title: "Since 1960", icon: CalendarClock },
-  { title: "Housewares", icon: Home },
-  { title: "Crockery", icon: UtensilsCrossed },
-  { title: "Presentation article", icon: Presentation },
-  { title: "Aluminum Vessels", icon: Package },
-  { title: "Steel Vessels", icon: Layers3 },
-  { title: "Brass Articles", icon: Gem },
-  { title: "Glassware", icon: GlassWater },
-  { title: "Small appliances", icon: Blend },
-  { title: "Traditional Utensils", icon: Utensils },
-  { title: "Cast Iron", icon: CookingPot },
+  { title: "Wholesale & Retail", icon: Store, href: "https://shop.usha1960.trade/" },
+  { title: "Since 1960", icon: CalendarClock, href: "https://shop.usha1960.trade/" },
+  { title: "Housewares", icon: Home, href: "https://shop.usha1960.trade/housewares" },
+  { title: "Crockery", icon: UtensilsCrossed, href: "https://shop.usha1960.trade/crockery" },
+  { title: "Presentation article", icon: Presentation, href: "https://shop.usha1960.trade/presentation-articles" },
+  { title: "Aluminum Vessels", icon: Package, href: "https://shop.usha1960.trade/aluminum-vessels" },
+  { title: "Steel Vessels", icon: Layers3, href: "https://shop.usha1960.trade/steel-vessels" },
+  { title: "Brass Articles", icon: Gem, href: "https://shop.usha1960.trade/brass-articles" },
+  { title: "Glassware", icon: GlassWater, href: "https://shop.usha1960.trade/glassware" },
+  { title: "Small appliances", icon: Blend, href: "https://shop.usha1960.trade/small-appliances" },
+  { title: "Traditional Utensils", icon: Utensils, href: "https://shop.usha1960.trade/traditional-utensils" },
+  { title: "Cast Iron", icon: CookingPot, href: "https://shop.usha1960.trade/cast-iron" },
 ];
 
 export function KnowMoreModal({ isOpen, onOpenChange }: KnowMoreModalProps) {
@@ -89,7 +90,7 @@ export function KnowMoreModal({ isOpen, onOpenChange }: KnowMoreModalProps) {
               {features.map((feature) => (
                 <a
                   key={feature.title}
-                  href="https://example.com"
+                  href={feature.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group"
