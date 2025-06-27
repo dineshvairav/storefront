@@ -29,6 +29,8 @@ export default function Home() {
     return () => clearInterval(timer); // Cleanup interval on component unmount
   }, []);
 
+  const nextImageIndex = (currentImageIndex + 1) % backgroundImages.length;
+
   return (
     <>
       <main className="relative flex min-h-screen flex-col items-center justify-center text-white overflow-hidden">
@@ -38,13 +40,12 @@ export default function Home() {
               key={image.src}
               src={image.src}
               alt="Background of kitchen appliances"
-              fill={true}
-              objectFit="cover"
-              className={`transition-opacity duration-[3000ms] ease-in-out brightness-50 ${
+              fill
+              className={`object-cover transition-opacity duration-[3000ms] ease-in-out brightness-50 ${
                 index === currentImageIndex ? "opacity-100" : "opacity-0"
               }`}
               data-ai-hint={image.hint}
-              priority
+              priority={index === currentImageIndex || index === nextImageIndex}
             />
           ))}
           <div className="absolute inset-0 bg-black/60" />
