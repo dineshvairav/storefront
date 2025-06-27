@@ -9,6 +9,9 @@ export default {
   ],
   theme: {
     extend: {
+      transitionDuration: {
+        '3000': '3000ms',
+      },
       fontFamily: {
         sans: ['Roboto', 'sans-serif'],
         malayalam: ['Meera Inimai', 'sans-serif'],
