@@ -15,7 +15,7 @@ type ContactModalProps = {
 };
 
 export function ContactModal({ isOpen, onOpenChange }: ContactModalProps) {
-  const address = "Usha Metals & Appliances, Fancy Bazaar, Changanacherry 686101, Kerala, India";
+  const address = "Usha Metals & Appliances, Fancy Bazaar, Changanacherry 686101.";
   const phone = "+91 99612 95835";
   const email = "ushaagency1960@gmail.com";
 
