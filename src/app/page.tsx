@@ -52,7 +52,7 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 flex flex-col items-center justify-center text-center p-4">
-          <div className="mb-4">
+          <div className="mb-8">
             <Image
               src="./logo.png"
               alt="Usha Logo"
