@@ -8,10 +8,10 @@ import { KnowMoreModal } from "@/components/know-more-modal";
 import { useState, useEffect } from "react";
 
 const backgroundImages = [
-  { src: "./home_1.png", hint: "kitchen appliances dark" },
-  { src: "./home_2.png", hint: "kitchen utensils" },
-  { src: "./home_3.png", hint: "modern cookware" },
-  { src: "./home_4.png", hint: "assorted pots pans" },
+  { src: "/home_1.png", hint: "kitchen appliances dark" },
+  { src: "/home_2.png", hint: "kitchen utensils" },
+  { src: "/home_3.png", hint: "modern cookware" },
+  { src: "/home_4.png", hint: "assorted pots pans" },
 ];
 
 export default function Home() {
@@ -24,7 +24,7 @@ export default function Home() {
       setCurrentImageIndex(
         (prevIndex) => (prevIndex + 1) % backgroundImages.length
       );
-    }, 15000); // 10s stand + 5s transition
+    }, 15000); // 12s stand + 3s transition
 
     return () => clearInterval(timer); // Cleanup interval on component unmount
   }, []);
@@ -40,7 +40,7 @@ export default function Home() {
               alt="Background of kitchen appliances"
               fill={true}
               objectFit="cover"
-              className={`transition-opacity duration-[5000ms] ease-in-out brightness-50 ${
+              className={`transition-opacity duration-[3000ms] ease-in-out brightness-50 ${
                 index === currentImageIndex ? "opacity-100" : "opacity-0"
               }`}
               data-ai-hint={image.hint}
@@ -53,7 +53,7 @@ export default function Home() {
         <div className="relative z-10 flex flex-col items-center justify-center text-center p-4">
           <div className="mb-4">
             <Image
-              src="./logo.png"
+              src="/logo.png"
               alt="Usha Logo"
               width={240}
               height={100}
