@@ -37,8 +37,8 @@ type Feature = {
 };
 
 const features: Feature[] = [
-  { title: "Wholesale & Retail", icon: Store, href: "https://shop.usha1960.trade/" },
-  { title: "Since 1960", icon: CalendarClock, href: "https://shop.usha1960.trade/" },
+  { title: "Wholesale & Retail", icon: Store, href: "https://shop.usha1960.trade/shop" },
+  { title: "Since 1960", icon: CalendarClock, href: "https://shop.usha1960.trade/shop" },
   { title: "Housewares", icon: Home, href: "https://shop.usha1960.trade/housewares" },
   { title: "Crockery", icon: UtensilsCrossed, href: "https://shop.usha1960.trade/crockery" },
   { title: "Presentation article", icon: Presentation, href: "https://shop.usha1960.trade/presentation-articles" },
