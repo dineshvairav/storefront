@@ -44,7 +44,7 @@ export default function Home() {
                 index === currentImageIndex ? "opacity-100" : "opacity-0"
               }`}
               data-ai-hint={image.hint}
-              priority={index === 0} // Prioritize loading the first image
+              priority
             />
           ))}
           <div className="absolute inset-0 bg-black/60" />
