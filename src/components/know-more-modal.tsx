@@ -38,17 +38,17 @@ type Feature = {
 
 const features: Feature[] = [
   { title: "Wholesale & Retail", icon: Store, href: "https://shop.usha1960.trade/shop" },
-  { title: "Since 1960", icon: CalendarClock, href: "https://shop.usha1960.trade/shop" },
-  { title: "Housewares", icon: Home, href: "https://shop.usha1960.trade/housewares" },
-  { title: "Crockery", icon: UtensilsCrossed, href: "https://shop.usha1960.trade/crockery" },
-  { title: "Presentation article", icon: Presentation, href: "https://shop.usha1960.trade/presentation-articles" },
-  { title: "Aluminum Vessels", icon: Package, href: "https://shop.usha1960.trade/aluminum-vessels" },
-  { title: "Steel Vessels", icon: Layers3, href: "https://shop.usha1960.trade/steel-vessels" },
-  { title: "Brass Articles", icon: Gem, href: "https://shop.usha1960.trade/brass-articles" },
-  { title: "Glassware", icon: GlassWater, href: "https://shop.usha1960.trade/glassware" },
-  { title: "Small appliances", icon: Blend, href: "https://shop.usha1960.trade/small-appliances" },
-  { title: "Traditional Utensils", icon: Utensils, href: "https://shop.usha1960.trade/traditional-utensils" },
-  { title: "Cast Iron", icon: CookingPot, href: "https://shop.usha1960.trade/cast-iron" },
+  { title: "Since 1960", icon: CalendarClock, href: "https://shop.usha1960.trade/about" },
+  { title: "Housewares", icon: Home, href: "https://shop.usha1960.trade/shop?category=preethi" },
+  { title: "Crockery", icon: UtensilsCrossed, href: "https://shop.usha1960.trade/shop?category=crockery" },
+  { title: "Presentation article", icon: Presentation, href: "https://shop.usha1960.trade/shop?category=gift" },
+  { title: "Aluminum Vessels", icon: Package, href: "https://shop.usha1960.trade/shop?category=aluminum" },
+  { title: "Steel Vessels", icon: Layers3, href: "https://shop.usha1960.trade/shop?category=steel" },
+  { title: "Brass Articles", icon: Gem, href: "https://shop.usha1960.trade/shop?category=brass" },
+  { title: "Glassware", icon: GlassWater, href: "https://shop.usha1960.trade/shop?category=glassware" },
+  { title: "Small appliances", icon: Blend, href: "https://shop.usha1960.trade/shop?category=sujata" },
+  { title: "Traditional Utensils", icon: Utensils, href: "https://shop.usha1960.trade/shop?category=traditional" },
+  { title: "Cast Iron", icon: CookingPot, href: "https://shop.usha1960.trade/shop?category=cast-iron" },
 ];
 
 export function KnowMoreModal({ isOpen, onOpenChange }: KnowMoreModalProps) {
