@@ -12,7 +12,11 @@ const backgroundImages = [
   { src: "./home_2.png", hint: "kitchen utensils" },
   { src: "./home_3.png", hint: "modern cookware" },
   { src: "./home_4.png", hint: "assorted pots pans" },
-  { src: "./home_5.png", hint: "kitchenware" },
+  { src: "./home_5.png", hint: "kitchenware pot" },
+  { src: "./home_6.png", hint: "kitchenware pan" },
+  { src: "./home_7.png", hint: "kitchenware hold" },
+  { src: "./home_8.png", hint: "kitchenware push" },
+  { src: "./home_9.png", hint: "kitchenware dark" },
 ];
 
 export default function Home() {
