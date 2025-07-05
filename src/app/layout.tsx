@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   title: 'Usha App',
   description: 'Your one-stop destination for quality household goods, from traditional vessels to modern appliances.',
   openGraph: {
-    title: 'Usha App',
+    title: 'Usha Since160|wholesale store',
     description: 'Your one-stop destination for quality household goods, from traditional vessels to modern appliances.',
-    siteName: 'Usha App',
+    siteName: 'Usha1960',
     images: [
       {
         url: '/home_1.png',
