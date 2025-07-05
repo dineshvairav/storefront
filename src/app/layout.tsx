@@ -5,6 +5,27 @@ import { cn } from '@/lib/utils';
 export const metadata: Metadata = {
   title: 'Usha App',
   description: 'Your one-stop destination for quality household goods, from traditional vessels to modern appliances.',
+  openGraph: {
+    title: 'Usha App',
+    description: 'Your one-stop destination for quality household goods, from traditional vessels to modern appliances.',
+    siteName: 'Usha App',
+    images: [
+      {
+        url: '/home_1.png',
+        width: 1200,
+        height: 630,
+        alt: 'A collection of Usha kitchenware and appliances.',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Usha App',
+    description: 'Your one-stop destination for quality household goods, from traditional vessels to modern appliances.',
+    images: ['/home_1.png'],
+  },
 };
 
 export default function RootLayout({
