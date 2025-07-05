@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     siteName: 'Usha1960',
     images: [
       {
-        url: '/home_1.png',
+        url: './home_1.png',
         width: 1200,
         height: 630,
         alt: 'A collection of Usha kitchenware and appliances.',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Usha App',
     description: 'Your one-stop destination for quality household goods, from traditional vessels to modern appliances.',
-    images: ['/home_1.png'],
+    images: ['./home_1.png'],
   },
 };
 
