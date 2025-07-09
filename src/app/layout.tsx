@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://usha1960.trade'),
-  title: 'Usha Since1960',
+  title: 'Usha | wholesale household goods | since1960',
   description: 'Your one-stop destination for quality household goods, from traditional vessels to modern appliances.',
   openGraph: {
     title: 'Usha Since1960 | wholesale store',
