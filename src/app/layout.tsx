@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     siteName: 'Usha1960',
     images: [
       {
-        url: './home_1.png',
+        url: './home_ai.png',
         width: 1200,
         height: 630,
         alt: 'A collection of Usha kitchenware and appliances.',
